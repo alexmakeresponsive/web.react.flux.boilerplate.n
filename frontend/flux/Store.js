@@ -1,5 +1,5 @@
 import FluxDispatcher from './Dispatcher.js';
-import MicroEvent from  './MicroEvent.js';
+import MicroEvent from '../../vendor/MicroEvent/index.js';
 
 let Store = {
     customers: [],
