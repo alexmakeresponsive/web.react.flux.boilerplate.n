@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.styl';
-
 import actionsCustomers from '../../flux/actions/customers.js';
 import Store from '../../flux/Store.js';
+
 
 class App extends React.Component {
     constructor(props) {
@@ -14,12 +14,7 @@ class App extends React.Component {
     }
 
     loadCustomers() {
-        // console.info('Customers loading...');
         actionsCustomers.getCustomers();
-            // .then(({ data }) =>
-            // console.log(actionsCustomers.getCustomers())
-            // this.setState({customers: data})
-        // );
     }
 
     componentDidMount() {
@@ -31,16 +26,10 @@ class App extends React.Component {
     }
 
     StoreChanged() {
-        // console.log('Store.customers = ', Store.customers);
         this.setState({customers: Store.customers});
-        // this.forceUpdate();
     }
 
-
-
     render() {
-        // console.log('Stete from render =', this.state);
-
         return (
             <div className="App content">
                 <div className=" t-center">
